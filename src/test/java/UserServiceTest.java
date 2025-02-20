@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.util.List;
 
+
 public class UserServiceTest {
     private final UserService userService = new UserServiceImpl();
 
@@ -91,7 +92,7 @@ public class UserServiceTest {
             userService.saveUser(testName, testLastName, testAge);
             userService.cleanUsersTable();
 
-            if (userService.getAllUsers().size() != 0) {
+            if (userService.getAllUsers().isEmpty()) {
                 Assert.fail("The method of clearing the user table is implemented incorrectly");
             }
         } catch (Exception e) {

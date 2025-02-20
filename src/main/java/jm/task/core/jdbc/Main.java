@@ -1,7 +1,5 @@
 package jm.task.core.jdbc;
 
-import jm.task.core.jdbc.dao.UserDao;
-import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.service.UserService;
 import jm.task.core.jdbc.service.UserServiceImpl;
@@ -17,7 +15,7 @@ public class Main {
         userService.saveUser("Darya", "Kim", (byte) 30);
 
         for (User user : userService.getAllUsers()) {
-            System.out.println("User with name -" + "name" + " added to the database");
+            System.out.println("User with name - " + "name" + " added to the database");
         }
         userService.cleanUsersTable();
 
