@@ -90,7 +90,7 @@ public class UserDaoHibernateImpl implements UserDao {
             Transaction tx = session.beginTransaction();
 
             // Выполняем SQL-запрос для очистки таблицы
-            session.createSQLQuery("TRUNCATE FROM users").executeUpdate();
+            session.createSQLQuery("TRUNCATE TABLE users").executeUpdate();
 
             // Подтверждаем транзакцию
             tx.commit();
